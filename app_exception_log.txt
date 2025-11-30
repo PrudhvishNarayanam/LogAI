@@ -1,0 +1,8 @@
+Exception: java.lang.NullPointerException: Attempt to invoke virtual method 'int java.lang.String.length()' on a null object reference
+    at com.example.logaisampleandroidapp.MainActivity.onCreate(MainActivity.java:40)
+    ... (other stack trace lines)
+
+Exception: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String toString()' on a null object reference
+    at com.example.logaisampleandroidapp.MainActivity.onCreate(MainActivity.java:52)
+    ... (other stack trace lines)
+
