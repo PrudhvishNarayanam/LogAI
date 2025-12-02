@@ -1,8 +1,6 @@
-package com.example.logaisampleandroidapp;
-
-import android.os.Bundle;
-import android.util.Log;
-
+/**
+ * Created by your_name on 30-11-2023
+ */
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -22,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
             for (StackTraceElement element : e.getStackTrace()) {
                 writer.write("    at " + element.toString() + "\n");
             }
-            writer.write("\n");
+            writer.write("
+");
             writer.close();
         } catch (IOException ioException) {
             Log.e("MainActivity", "Failed to write log file", ioException);
@@ -43,15 +42,6 @@ public class MainActivity extends AppCompatActivity {
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
         });
-        try {
-            // Another intentional NullPointerException
-            Object obj = null;
-            obj.toString(); // This will throw NullPointerException
-        } catch (Exception e) {
-            logExceptionToFile(e);
-        }
     }
 }
