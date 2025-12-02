@@ -46,12 +46,8 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        try {
-            // Another intentional NullPointerException
             Object obj = null;
-            obj.toString(); // This will throw NullPointerException
-        } catch (Exception e) {
-            logExceptionToFile(e);
-        }
+            obj.toString();
+        
     }
 }
